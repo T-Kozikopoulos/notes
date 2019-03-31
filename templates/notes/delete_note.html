@@ -1,0 +1,9 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-secondary"><a href="{% url 'notes_index' %}">Cancel</a></button>
+        <button type="submit" class="btn btn-danger">Delete this note.</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'notes/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 style="text-align: center">About</h1>
+        <p class="about-page">
+            This is a website for taking notes about anything and everything,
+            from groceries to lecture bullet points. Paired with a mobile app
+            (soon™), your notes are always available
+            on multiple devices. Create an account and get started today!
+        </p>
+    </div>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Create an account to start using the app.</legend>
+                {{ form | crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            Already have an account? <a href="{% url 'login' %}"><b>Log in</b></a> instead.
+        </div>
+    </div>
+{% endblock %}

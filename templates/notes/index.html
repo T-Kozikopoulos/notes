@@ -1,0 +1,25 @@
+{% extends 'notes/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <div class="note-wrap note-new">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-outline-primary">Add Note</button>
+        </form>
+    </div>
+
+    {% for note in notes %}
+        <aside class="note-wrap note-white">
+            <h3><u>{{ note.title }}</u></h3>
+            <h5>{{ note.content }}</h5>
+            <small class="text-muted" style="font-size: 45%">
+                <i>{{ note.date_created | date:"b d, P" }}</i>
+            </small>
+            <br>
+            <a href="{% url 'delete_note' pk=note.pk %}">Delete</a>
+        </aside>
+    {% endfor %}
+{% endblock %}
