@@ -8,4 +8,4 @@ Homepage:
 App page:
 ![App](https://i.ibb.co/s1D7YkR/app.png)
 Sign Up page:
-![signup](https://i.ibb.co/ZgR5Sz7/register.png)
+![signup](https://i.ibb.co/vYZn2qs/register.png)
