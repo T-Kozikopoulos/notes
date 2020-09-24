@@ -1,7 +1,7 @@
 # notes
 Online note taking app made with Django. Create an account and you can view your notes from anywhere.
 
-Live website demo: [www.beta-notes.herokuapp.com](beta-notes.herokuapp.com).
+Live website demo: [beta-notes.herokuapp.com](www.beta-notes.herokuapp.com).
 
 Homepage:
 ![index](https://i.ibb.co/0nVNF0K/screen.png)
